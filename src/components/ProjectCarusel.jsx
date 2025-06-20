@@ -36,12 +36,12 @@ export default function ProjectCarousel() {
   if (!projects) return null;
 
   const myVariants = {
-    offscreen: { y: 60, opacity: 0, scale: 0.8 },
+    offscreen: { y: 60, opacity: 0, scale: 0.5 },
     onscreen: {
       y: 0,
       opacity: 1,
       scale: 1,
-      transition: { type: "spring", bounce: 0.3, duration: 1 },
+      transition: { type: "spring", bounce: 0.3, duration: 2 },
     },
   };
 
