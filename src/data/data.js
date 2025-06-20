@@ -7,8 +7,9 @@ import nodeImgIcon from '../assets/images/logo-node.png';
 import reactImgIcon from '../assets/images/logo-react.png';
 import reduxImgIcon from '../assets/images/logo-redux.png';
 import vsImgIcon from '../assets/images/logo-vs.png';
-import projectImg1 from '../assets/images/project1.png';
-import projectImg2 from '../assets/images/project2.png';
+import projectImg1 from '../assets/images/proje1.png';
+import projectImg2 from '../assets/images/proje2.png';
+import projectImgPC from '../assets/images/pc.png';
 
 export const data = {
     en: {

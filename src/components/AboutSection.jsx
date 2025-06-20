@@ -2,6 +2,7 @@ import HighlightText from "./HighlightText";
 import { useSectionData } from "../hooks/useSectionData";
 import { useAppContext } from "../context/AppContext";
 import ResponsiveShape from "./ResponsiveShape";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   /*const data = useSelector((state) => state.data);
@@ -13,7 +14,13 @@ export default function AboutSection() {
 
   return (
     <section className="z-0 pt-10 md:pb-18 px-2 md:px-0 w-auto mx-auto relative bg-[#F4F4F4] dark:bg-[#2A262B]">
-      <div className="flex flex-col max-w-6xl items-center justify-center mx-auto">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-col max-w-6xl items-center justify-center mx-auto"
+      >
         {/* Başlık */}
         <h2 className="font-inter text-4xl font-[500px] leading-[100%] tracking-[0.01em] text-center text-[#0A0A14] dark:text-[#F4F4F4] pt-8 pb-10">
           {about.title}
@@ -79,7 +86,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <ResponsiveShape
         rightPercent={0.01}
         yPercent={0.05}
@@ -87,7 +94,7 @@ export default function AboutSection() {
         offsetHalfHeight={true}
         offsetHalfWidth={true}
         borderBase={21}
-        className="w-[121px] h-[121px] border-[21px] bg-transparent border-[#EA2678] dark:border-[#525252] rounded-full"
+        className="w-[121px] h-[121px] border-[21px] bg-transparent border-[#EA2678] rounded-full"
       />
     </section>
   );

@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import { useSectionData } from "../hooks/useSectionData";
 import { useAppContext } from "../context/AppContext";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ProjectCarousel() {
   const projects = useSectionData("projects");
@@ -34,12 +35,29 @@ export default function ProjectCarousel() {
 
   if (!projects) return null;
 
+  const myVariants = {
+    offscreen: { y: 60, opacity: 0, scale: 0.8 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.3, duration: 1 },
+    },
+  };
+
   return (
     <section className="pt-16 pb-14 px-2 md:px-0 lg:pb-30 w-auto mx-auto dark:bg-[#484148]">
       <h2 className="text-4xl font-medium text-center leading-[100%] pb-12 text-[#0A0A14] dark:text-white font-inter">
         {locale === "tr" ? "Projeler" : "Projects"}
       </h2>
-      <div ref={sliderRef} className="keen-slider w-full max-w-7xl mx-auto">
+      <motion.div
+        variants={myVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: false, amount: 0.3 }}
+        ref={sliderRef}
+        className="keen-slider w-full max-w-7xl mx-auto"
+      >
         {projects.map((project, idx) => (
           <div
             className="keen-slider__slide flex justify-center items-center md:items-stretch"
@@ -50,7 +68,7 @@ export default function ProjectCarousel() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
       {/* Dot navigation */}
       <div className="flex justify-center mt-6 gap-3">
         {projects.map((_, idx) => (

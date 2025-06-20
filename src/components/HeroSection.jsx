@@ -4,8 +4,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import SocialIcon from "./SocialIcon";
 import HighlightText from "./HighlightText";
 import { useSectionData } from "../hooks/useSectionData";
-import Shape from "./Shape";
 import ResponsiveShape from "./ResponsiveShape";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const { locale } = useAppContext();
@@ -26,7 +26,13 @@ export default function HeroSection() {
           <LanguageSwitcher />
         </div>
         <div className="pl-2 pr-2 flex md:flex-row flex-col items-center justify-between">
-          <div className="flex-1 flex flex-col gap-4 w-full">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 80, damping: 18 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 flex flex-col gap-4 w-full"
+          >
             <span className="font-inter text-[30px] dark:text-white font-normal">
               {hero.greeting} 👋
             </span>
@@ -73,15 +79,25 @@ export default function HeroSection() {
               className="rich-text tracking-[0.05em] pt-4 md:max-w-[540px] text-[18px] font-inter font-normal leading-8 text-gray-700 dark:text-white"
               dangerouslySetInnerHTML={{ __html: hero.ctaHTML }}
             />
-          </div>
+          </motion.div>
 
-          <div className="flex-1 flex flex-col items-center justify-center md:items-end mt-8 md:mt-0 w-full">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 18,
+            }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 flex flex-col items-center justify-center md:items-end mt-8 md:mt-0 w-full"
+          >
             <img
               src={`${hero.profileImage}`}
               alt="profile"
               className="rounded-2xl object-cover w-[360px] h-[360px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <ResponsiveShape

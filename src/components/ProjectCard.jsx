@@ -55,7 +55,7 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
       {/* Görsel */}
-      <div className="flex-1 flex items-end justify-center lg:w-full lg:max-w-[500px] lg:max-h-[287px] lg:mx-auto">
+      <div className="flex-1 lg:w-full lg:max-w-[500px] lg:max-h-[287px] lg:mx-auto">
         <img
           src={project.image}
           alt={project.title}

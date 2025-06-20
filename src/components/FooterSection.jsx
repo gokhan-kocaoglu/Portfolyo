@@ -1,6 +1,7 @@
 import { useAppContext } from "../context/AppContext";
 import HighlightText from "./HighlightText";
 import { useSectionData } from "../hooks/useSectionData";
+import { motion } from "framer-motion";
 
 export default function FooterSection() {
   /*const data = useSelector((state) => state.data);
@@ -11,7 +12,13 @@ export default function FooterSection() {
   return (
     <footer className="w-auto bg-white dark:bg-[#484148]">
       <div className="pt-16 pb-32 lg:pr-16 max-w-6xl mx-auto flex flex-col gap-14 md:flex-row items-center md:items-center justify-end">
-        <div className="w-full md:w-[510px] flex flex-col items-center md:items-end">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 80, damping: 18 }}
+          viewport={{ once: false }}
+          className="w-full md:w-[510px] flex flex-col items-center md:items-end"
+        >
           <h2 className="text-[32px] md:text-[32px] lg:text-[42px] leading-[150%] tracking-[0.01em] lg:text-right font-inter font-medium text-center text-[#0A0A14] dark:text-white pb-4">
             {/*<span className="relative z-10">
               {footer.title}
@@ -43,8 +50,14 @@ export default function FooterSection() {
               />
             )}
           </h2>
-        </div>
-        <div className="flex flex-col items-center min-w-80 md:max-w-40 md:items-start">
+        </motion.div>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 80, damping: 18 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="flex flex-col items-center min-w-80 md:max-w-40 md:items-start"
+        >
           {footer.links.map((link, i) => (
             <a
               key={i}
@@ -56,7 +69,7 @@ export default function FooterSection() {
               {link.label}
             </a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
