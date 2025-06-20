@@ -2,12 +2,20 @@ import { useAppContext } from "../context/AppContext";
 import HighlightText from "./HighlightText";
 import { useSectionData } from "../hooks/useSectionData";
 import { motion } from "framer-motion";
+import useToastRedirect from "../hooks/useToastRedirect";
 
 export default function FooterSection() {
   /*const data = useSelector((state) => state.data);
   const footer = data[locale].footerSection;*/
   const { locale } = useAppContext();
   const footer = useSectionData("footerSection");
+  const handleClick = useToastRedirect({
+    toastMessage: (alt, s) =>
+      locale === "tr"
+        ? `${s} sn sonra ${alt} sayfasına yönlendirileceksiniz...`
+        : `You will be redirected to ${alt} page in ${s} seconds...`,
+    loadingMessage: locale === "tr" ? "Yönlendiriliyor..." : "Redirecting...",
+  });
   if (!footer) return null;
   return (
     <footer className="w-auto bg-white dark:bg-[#484148]">
@@ -64,6 +72,9 @@ export default function FooterSection() {
               href={link.url}
               className={`${link.color} font-medium font-inter text-2xl leading-[150%] tracking-normal hover:underline`}
               target="_blank"
+              onClick={(e) =>
+                handleClick(e, { href: link.url, alt: link.label })
+              }
               rel="noopener noreferrer"
             >
               {link.label}

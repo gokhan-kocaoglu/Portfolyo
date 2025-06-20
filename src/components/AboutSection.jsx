@@ -9,7 +9,6 @@ export default function AboutSection() {
   const about = data[locale].aboutSection;*/
   const { locale } = useAppContext();
   const about = useSectionData("aboutSection");
-  console.log("about", about);
   if (!about || !about.title) return null;
 
   return (

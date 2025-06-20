@@ -1,8 +1,16 @@
 import arrowRightIcon from "../assets/images/arrow-right.svg";
 import { useAppContext } from "../context/AppContext";
+import useToastRedirect from "../hooks/useToastRedirect";
 
 export default function ProjectCard({ project }) {
   const { locale } = useAppContext();
+  const handleClick = useToastRedirect({
+    toastMessage: (alt, s) =>
+      locale === "tr"
+        ? `${s} sn sonra ${alt} sayfasına yönlendirileceksiniz...`
+        : `You will be redirected to ${alt} page in ${s} seconds...`,
+    loadingMessage: locale === "tr" ? "Yönlendiriliyor..." : "Redirecting...",
+  });
   return (
     <div
       className={`relative flex-1 rounded-2xl ${project.bg} p-10 flex flex-col md:h-[670px] max-w-[500px] justify-center items-start`}
@@ -33,6 +41,9 @@ export default function ProjectCard({ project }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) =>
+              handleClick(e, { href: project.github, alt: "Github" })
+            }
             className="hover:underline font-inter text-[20px] font-semibold leading-[150%] tracking-normal text-black dark:text-white"
           >
             {locale === "en" ? "View on Github" : "Github'da görüntüle"}
@@ -43,6 +54,12 @@ export default function ProjectCard({ project }) {
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) =>
+              handleClick(e, {
+                href: project.github,
+                alt: `${locale === "en" ? "APP" : "Uygulamaya"}`,
+              })
+            }
             className="flex items-center gap-2 group font-inter text-[20px] font-semibold leading-[150%] tracking-normal  text-black dark:text-white"
           >
             {locale === "en" ? "Go to app " : "Uygulamaya Git "}

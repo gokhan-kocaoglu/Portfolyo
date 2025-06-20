@@ -9,7 +9,6 @@ import reduxImgIcon from '../assets/images/logo-redux.png';
 import vsImgIcon from '../assets/images/logo-vs.png';
 import projectImg1 from '../assets/images/proje1.png';
 import projectImg2 from '../assets/images/proje2.png';
-import projectImgPC from '../assets/images/pc.png';
 
 export const data = {
     en: {
@@ -220,7 +219,7 @@ export const data = {
                 bg: "bg-[#D9F6F1] dark:bg-[#495351]"
             },
             {
-                title: "Random Jokes",
+                title: "Rastgele Fıkralar",
                 description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
                 tags: ["react", "vercel", "axios", "router"],
                 github: "https://github.com/example1",
@@ -229,7 +228,7 @@ export const data = {
                 bg: "bg-[#DDEEFE] dark:bg-[#2D3235]"
             },
             {
-                title: "Are you bored?",
+                title: "Sıkıldın mı?",
                 description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
                 tags: ["react", "redux", "axios", "router", "vercel"],
                 github: "https://github.com/example2",

@@ -3,13 +3,13 @@ import { AppProvider, useAppContext } from "./context/AppContext";
 import HeroSection from "./components/HeroSection";
 import SkillsSection from "./components/SkillsSection.jsx";
 import AboutSection from "./components/AboutSection.jsx";
-import ProjeSection from "./components/ProjeSection.jsx";
 import FooterSection from "./components/FooterSection.jsx";
 import { HighlightProvider } from "./context/HighlightContext.jsx";
 import ProjectCarousel from "./components/ProjectCarusel.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "./store/actions/dataActions.js";
 import LoadingFullScreen from "./components/LoadingFullScreen.jsx";
+import { ToastContainer } from "react-toastify";
 
 function AppInner() {
   const { theme } = useAppContext();
@@ -45,6 +45,7 @@ function AppInner() {
       <AboutSection></AboutSection>
       <ProjectCarousel></ProjectCarousel>
       <FooterSection></FooterSection>
+      <ToastContainer></ToastContainer>
       {/* Diğer sectionlar buraya gelecek */}
     </main>
   );

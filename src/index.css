@@ -2,13 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
-@import "swiper/css";
-@import "swiper/css/pagination";
-@import "swiper/css/navigation";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-inter: "Inter", "sans-serif";
   --font-playFair:"Playfair Display","sans-serif";
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important;
+  color: #333 !important;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  color: white !important;
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: white !important;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%) !important;
+  color: white !important;
+}
+
+.Toastify__progress-bar--info {
+  background: rgba(0, 0, 0, 1) !important;
 }
