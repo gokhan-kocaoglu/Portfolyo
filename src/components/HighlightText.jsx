@@ -1,5 +1,6 @@
 import { useHighlight } from "../context/HighlightContext";
 import { useAppContext } from "../context/AppContext";
+import React from "react";
 
 export default function HighlightText({
   text,

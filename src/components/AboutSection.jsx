@@ -3,6 +3,7 @@ import { useSectionData } from "../hooks/useSectionData";
 import { useAppContext } from "../context/AppContext";
 import ResponsiveShape from "./ResponsiveShape";
 import { motion } from "framer-motion";
+import React from "react";
 
 export default function AboutSection() {
   /*const data = useSelector((state) => state.data);

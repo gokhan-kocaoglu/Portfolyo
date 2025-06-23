@@ -1,4 +1,5 @@
 import { useAppContext } from "../context/AppContext";
+import React from "react";
 
 export default function DarkModeSwitch() {
   const { theme, toggleTheme } = useAppContext();

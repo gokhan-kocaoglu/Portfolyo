@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { useAppContext } from "../context/AppContext";
 import { useSectionData } from "../hooks/useSectionData";
+import React from "react";
 
 export default function ProjeSection() {
   const { locale } = useAppContext();

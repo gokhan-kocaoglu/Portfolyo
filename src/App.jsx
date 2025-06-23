@@ -46,7 +46,6 @@ function AppInner() {
       <ProjectCarousel></ProjectCarousel>
       <FooterSection></FooterSection>
       <ToastContainer></ToastContainer>
-      {/* Diğer sectionlar buraya gelecek */}
     </main>
   );
 }

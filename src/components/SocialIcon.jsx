@@ -1,5 +1,6 @@
 import { useAppContext } from "../context/AppContext";
 import useToastRedirect from "../hooks/useToastRedirect";
+import React from "react";
 
 export default function SocialIcon({ logo, alt, link }) {
   const { locale } = useAppContext();

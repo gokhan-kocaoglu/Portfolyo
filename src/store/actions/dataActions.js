@@ -9,7 +9,6 @@ export const getData=()=>(dispatch)=>{
     dispatch({type:GET_DATA_LOADİNG});
     axios.post("https://httpbin.org/post",data)
     .then((res)=>{
-        console.log(res.data);
         dispatch({type:GET_DATA_SUCCESS,payload:res.data.json});
     })
     .catch((error)=>{

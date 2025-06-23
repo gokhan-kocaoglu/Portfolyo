@@ -1,6 +1,7 @@
 import arrowRightIcon from "../assets/images/arrow-right.svg";
 import { useAppContext } from "../context/AppContext";
 import useToastRedirect from "../hooks/useToastRedirect";
+import React from "react";
 
 export default function ProjectCard({ project }) {
   const { locale } = useAppContext();

@@ -3,6 +3,7 @@ import HighlightText from "./HighlightText";
 import { useSectionData } from "../hooks/useSectionData";
 import { motion } from "framer-motion";
 import useToastRedirect from "../hooks/useToastRedirect";
+import React from "react";
 
 export default function FooterSection() {
   /*const data = useSelector((state) => state.data);
