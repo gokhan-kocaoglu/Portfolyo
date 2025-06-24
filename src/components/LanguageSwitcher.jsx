@@ -7,12 +7,13 @@ export default function LanguageSwitcher() {
       onClick={switchLocale}
       className="text-pink-600 font-inter tracking-widest text-[15px] font-[700]"
       aria-label="Dili değiştir"
+      data-testid="btnLangSwitch"
     >
       {locale === "tr" ? (
-        "ENGLISH"
+        <span data-testid="lang-label">ENGLISH</span>
       ) : (
         <>
-          TÜRKÇE
+          <span data-testid="lang-label">TÜRKÇE</span>
           <span className="text-[#777777] dark:text-[#ffffff]">'YE GEÇ</span>
         </>
       )}

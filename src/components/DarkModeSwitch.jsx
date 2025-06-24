@@ -8,6 +8,7 @@ export default function DarkModeSwitch() {
       aria-label="Toggle dark mode"
       type="button"
       className="flex items-center gap-2 focus:outline-none"
+      data-testid="btnDark"
       onClick={toggleTheme}
     >
       {/* Switch görseli */}
@@ -22,7 +23,7 @@ export default function DarkModeSwitch() {
           )}
         </span>
       </span>
-      <span className="tracking-widest text-[15px] dark:text-[#ffffff] font-bold font-inter text-[#777777] select-none">
+      <span data-testid="darkmode-label" className="tracking-widest text-[15px] dark:text-[#ffffff] font-bold font-inter text-[#777777] select-none">
         {theme === "dark" ? "LIGHT" : "DARK"} MODE
       </span>
     </button>
