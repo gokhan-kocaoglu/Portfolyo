@@ -1,12 +1,153 @@
-# React + Vite
+MyPortfolyo – Kişisel Geliştirici Portfolyo Projesi
+Genel Bakış
+MyPortfolyo, modern web geliştirme trendlerine uygun olarak geliştirilmiş, kişisel portfolyo ve özgeçmiş sitenizdir. Tamamen React, Vite, Redux, TailwindCSS ve modern React ekosisteminin güncel araçları ile geliştirilmiştir.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proje; çoklu dil desteği, karanlık & aydınlık tema seçeneği, responsive tasarım, animasyonlar, dinamik veri yönetimi ve gelişmiş test altyapısı gibi ileri seviye özellikler barındırır.
 
-Currently, two official plugins are available:
+İçerik
+Genel Bakış
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Kullanılan Teknolojiler
 
-## Expanding the ESLint configuration
+Özellikler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Kurulum
+
+Yapı ve Mimarisi
+
+Testler
+
+Dizin Yapısı
+
+Katkıda Bulunanlar
+
+Lisans
+
+Kullanılan Teknolojiler
+React (Vite ile ultra hızlı dev ortamı)
+
+Redux (veri yönetimi için)
+
+Redux Thunk (asenkron işlemler için)
+
+TailwindCSS (utility-first modern CSS framework)
+
+Framer Motion (animasyonlar için)
+
+React Toastify (bildirimler için)
+
+React Lottie (yükleme animasyonları için)
+
+React-Redux (bağlantı için)
+
+React Router DOM (routing için)
+
+Jest & React Testing Library / Vitest (birim ve entegrasyon testleri için)
+
+Cypress (isteğe bağlı uçtan uca test)
+
+Axios (API işlemleri için)
+
+LocalStorage (tema & dil kalıcılığı için)
+
+Custom Hooks ve Context API (state ve veri yönetiminde modern React pratikleri)
+
+Özellikler
+🌐 Çoklu Dil Desteği: Türkçe ve İngilizce.
+
+🌙 Karanlık & Aydınlık Tema: Kullanıcı tercihine göre otomatik ve buton ile anında değişim.
+
+📱 Tamamen Responsive: Tüm cihazlarda sorunsuz ve modern görünüm.
+
+🗂️ Bileşen Bazlı Yapı: Her ana bölüm kendi component olarak ayrılmıştır.
+
+🧑‍💻 Dinamik Veri Yönetimi: Veriler merkezi Redux store ile yönetilir, API’den çekilir.
+
+⚡ Hızlı Performans: Vite sayesinde hızlı build ve development ortamı.
+
+✨ Animasyonlar: Framer Motion ile giriş/çıkış ve scroll animasyonları.
+
+🔔 Bildirimler: React Toastify ile şık ve özelleştirilebilir bildirimler.
+
+🦾 Yükleme Animasyonu: Lottie ile modern ve etkileşimli loading ekranı.
+
+💾 Kalıcılık: Tema ve dil seçimleri localStorage ile korunur.
+
+🧪 Test Edilebilirlik: RTL ve Vitest ile komponent, store ve etkileşim testleri yazılmıştır.
+
+Kurulum
+bash
+Kopyala
+Düzenle
+# Projeyi klonlayın
+git clone https://github.com/kullanici_adi/myportfolyo.git
+cd myportfolyo
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme ortamında başlatın
+npm run dev
+
+# Testleri çalıştırın
+npm run test
+Yapı ve Mimarisi
+src/
+
+components/: Her bir sayfa bölümü ve atomik componentler (örn: HeroSection, SkillsSection, FooterSection, ResponsiveShape vs.)
+
+context/: React Context API ile tema, dil, highlight vb. yönetimi.
+
+hooks/: Custom hook’lar (örn: useResponsivePosition, useSectionData)
+
+store/: Redux store, reducer ve aksiyonlar.
+
+data/: Statik veya mock veriler (çoklu dil desteği ile).
+
+assets/: Görseller, ikonlar, svg’ler.
+
+test/: RTL/Vitest testleri.
+
+App.jsx: Tüm uygulamanın ana konteyneri.
+
+main.jsx: Giriş noktası.
+
+Testler
+Vitest + React Testing Library ile tüm ana componentlerin yüklenme, render ve etkileşim testleri yazılmıştır.
+
+Axios ve Redux thunk ile yapılan API çağrıları mock’lanabilir.
+
+Ana akışlar, tema ve dil geçişi, section render’ları, kullanıcı etkileşimleri (örn: dark mode toggle, sosyal ikon tıklama) test edilmiştir.
+
+Dizin Yapısı (Örnek)
+css
+Kopyala
+Düzenle
+src/
+│
+├── assets/
+│   └── images/
+├── components/
+│   ├── HeroSection.jsx
+│   ├── SkillsSection.jsx
+│   ├── AboutSection.jsx
+│   └── ...
+├── context/
+│   ├── AppContext.jsx
+│   └── HighlightContext.jsx
+├── data/
+│   └── data.js
+├── hooks/
+│   ├── useSectionData.js
+│   └── useResponsivePosition.js
+├── store/
+│   ├── actions/
+│   ├── reducers/
+│   └── store.js
+├── test/
+│   └── App.test.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+Katkıda Bulunanlar
+Gökhan Kocaoğlu – LinkedIn
