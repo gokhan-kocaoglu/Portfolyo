@@ -74,7 +74,8 @@ Custom Hooks ve Context API (state ve veri yönetiminde modern React pratikleri)
 
 ### Projeyi klonlayın
 
-git clone https://github.com/gokhan-kocaoglu/myportfolyo.git
+git clone https://github.com/gokhan-kocaoglu/Portfolyo.git
+
 cd myportfolyo
 
 ### Bağımlılıkları yükleyin
