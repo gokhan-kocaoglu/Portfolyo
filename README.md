@@ -38,11 +38,7 @@ React Lottie (yükleme animasyonları için)
 
 React-Redux (bağlantı için)
 
-React Router DOM (routing için)
-
 Jest & React Testing Library / Vitest (birim ve entegrasyon testleri için)
-
-Cypress (isteğe bağlı uçtan uca test)
 
 Axios (API işlemleri için)
 
@@ -78,7 +74,7 @@ Custom Hooks ve Context API (state ve veri yönetiminde modern React pratikleri)
 
 ### Projeyi klonlayın
 
-git clone https://github.com/kullanici_adi/myportfolyo.git
+git clone https://github.com/gokhan-kocaoglu/myportfolyo.git
 cd myportfolyo
 
 ### Bağımlılıkları yükleyin

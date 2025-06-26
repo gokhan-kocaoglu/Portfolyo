@@ -17,7 +17,6 @@ export function HighlightProvider({ children }) {
   const [highlightWords, setHighlightWords] = useState({
     en: "work together",
     tr: "birlikte çalışalım",
-    // başka diller eklenebilir
   });
 
   return (
