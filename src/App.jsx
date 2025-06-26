@@ -28,7 +28,7 @@ function AppInner() {
 
   useEffect(() => {
     dispatch(getData());
-  }, []);
+  }, [dispatch]);
 
   if (loading)
     return (
