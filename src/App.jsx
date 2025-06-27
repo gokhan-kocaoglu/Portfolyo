@@ -33,19 +33,19 @@ function AppInner() {
   if (loading)
     return (
       <div>
-        <LoadingFullScreen></LoadingFullScreen>
+        <LoadingFullScreen />
       </div>
     );
   if (error) return <div>Hata: {error}</div>;
 
   return (
     <main className="overflow-x-hidden">
-      <HeroSection></HeroSection>
-      <SkillsSection></SkillsSection>
-      <AboutSection></AboutSection>
-      <ProjectCarousel></ProjectCarousel>
-      <FooterSection></FooterSection>
-      <ToastContainer></ToastContainer>
+      <HeroSection />
+      <SkillsSection />
+      <AboutSection />
+      <ProjectCarousel />
+      <FooterSection />
+      <ToastContainer />
     </main>
   );
 }

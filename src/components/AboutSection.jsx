@@ -4,6 +4,7 @@ import { useAppContext } from "../context/AppContext";
 import ResponsiveShape from "./ResponsiveShape";
 import { motion } from "framer-motion";
 import React from "react";
+import PercentPositionedBox from "./PercentPositionedBox";
 
 export default function AboutSection() {
   /*const data = useSelector((state) => state.data);
@@ -87,7 +88,7 @@ export default function AboutSection() {
           </div>
         </div>
       </motion.div>
-      <ResponsiveShape
+      {/*<ResponsiveShape
         rightPercent={0.01}
         yPercent={0.05}
         responsiveScale={true}
@@ -95,6 +96,22 @@ export default function AboutSection() {
         offsetHalfWidth={true}
         borderBase={21}
         className="w-[121px] h-[121px] border-[21px] bg-transparent border-[#EA2678] rounded-full"
+      />*/}
+
+      {/*çember*/}
+      <PercentPositionedBox
+        top={0}
+        right={0}
+        width={6.5}
+        borderPercent={15}
+        borderColor="#EA2678"
+        darkBorderColor="#EA2678" // Border genişliğinin %15'i kadar olacak
+        style={{
+          borderRadius: "50%",
+          background: "transparent",
+          transform: "translate(35%, -25%)",
+        }}
+        className="-z-[1]"
       />
     </section>
   );

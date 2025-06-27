@@ -7,6 +7,7 @@ import { useSectionData } from "../hooks/useSectionData";
 import ResponsiveShape from "./ResponsiveShape";
 import { motion } from "framer-motion";
 import React from "react";
+import PercentPositionedBox from "./PercentPositionedBox";
 
 export default function HeroSection() {
   const { locale } = useAppContext();
@@ -101,7 +102,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-      <ResponsiveShape
+      {/*<ResponsiveShape
         xPercent={0.32}
         yPercent={0.0}
         offsetHalfHeight={true}
@@ -109,8 +110,8 @@ export default function HeroSection() {
         maxSize={112}
         minSize={36}
         className="w-28 h-28 bg-[#D9D9D9] dark:bg-[#525252] rounded-full"
-      />
-      <ResponsiveShape
+      />*/}
+      {/*<ResponsiveShape
         rightPercent={-0.05}
         bottomPercent={0.12}
         maxSizeH={59}
@@ -119,6 +120,31 @@ export default function HeroSection() {
         minSizeH={20}
         responsiveScale={true}
         className="w-[217px] h-[59px] bg-[#EA2678] rounded-[30px]"
+      />*/}
+
+      {/*daire*/}
+      <PercentPositionedBox
+        top={0}
+        left={35}
+        width={6}
+        style={{
+          borderRadius: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+        className="-z-[1] bg-[#D9D9D9] dark:bg-[#525252]"
+      />
+
+      {/*oval Çubuk*/}
+      <PercentPositionedBox
+        bottom={12}
+        right={0}
+        width={10}
+        height={8}
+        style={{
+          borderRadius: "30px",
+          transform: "translate(50%, 0%)",
+        }}
+        className="-z-[1] bg-[#EA2678]"
       />
     </section>
   );

@@ -1,4 +1,5 @@
 import { useSectionData } from "../hooks/useSectionData";
+import PercentPositionedBox from "./PercentPositionedBox";
 import ResponsiveShape from "./ResponsiveShape";
 import { motion } from "framer-motion";
 import React from "react";
@@ -38,7 +39,7 @@ export default function SkillsSection() {
           ))}
         </div>
       </motion.div>
-      <ResponsiveShape
+      {/*<ResponsiveShape
         xPercent={0.66}
         yPercent={0.0}
         offsetHalfHeight={true}
@@ -58,6 +59,35 @@ export default function SkillsSection() {
         minSizeW={100}
         responsiveScale={true}
         className="w-[181px] h-[49px] bg-[#525252] rounded-[30px]"
+      />*/}
+
+      {/*çember*/}
+      <PercentPositionedBox
+        top={0}
+        right={24}
+        width={6.5}
+        borderPercent={15}
+        borderColor="#D9D9D9"
+        darkBorderColor="#525252" // Border genişliğinin %15'i kadar olacak
+        style={{
+          borderRadius: "50%",
+          background: "transparent",
+          transform: "translate(-50%, -50%)",
+        }}
+        className="-z-[1]"
+      />
+
+      {/*oval çubuk*/}
+      <PercentPositionedBox
+        bottom={12}
+        left={0}
+        width={10}
+        height={12}
+        style={{
+          borderRadius: "30px",
+          transform: "translate(-50%, 0%)",
+        }}
+        className="-z-[1] bg-[#525252]"
       />
     </section>
   );
